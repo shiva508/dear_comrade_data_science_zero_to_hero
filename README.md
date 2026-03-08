@@ -72,73 +72,33 @@
 #### Therefore, we have an 8 x 9 weights matrix for the linear relationship between the input layer and the hidden layer.
 #### Let's call this matrix w1 and the hidden units h.
 #### According to the linear model, h is equal to x times w1.
-![Step_1](/images/non_linear_purpose_step_2.png)
+![Step_2](/images/non_linear_purpose_step_2.png)
 #### Let's ignore the biases for a while.So,our hidden units are summarized in the matrix h with a shape of one by nine.
 #### Now, let's get to the output layer from the hidden layer.
 #### Once again, according to the linear model, y is equal to h times w2, We have w2, as these weights are different.
-![Step_1](/images/non_linear_purpose_step_3.png)
+![Step_3](/images/non_linear_purpose_step_3.png)
 #### We already know the h matrix is equal to x times w1, right?
+![Step_4](/images/non_linear_purpose_step_4.png)
 #### Let's replace h in this equation. y is equal to x times w1 times w2.
-![Step_1](/images/non_linear_purpose_step_4.png)
-But w1 and w2 can be multiplied, right?
+![Step_5](/images/non_linear_purpose_step_5.png)
+#### But w1 and w2 can be multiplied, right? 
+#### What we get is a combined matrix. w* with dimensions eight by four.
+![Step_6](/images/non_linear_purpose_step_6.png)
+#### Well then, our deep neck can be simplified into a linear model, which looks this way.
+#### y equals x times w*.
+#### Knowing that, we realize the hidden layer is completely useless in this case.
+#### We can just train this simple linear model and we would get the same result.
+![Step_7](/images/non_linear_purpose_step_7.png)
+#### In mathematics, this seems like an obvious fact, but in machine learning, it is not so clear from the beginning.
+#### The two consecutive linear transformations are equivalent to a single one.
+#### Even if we add 100 layers the problem would be simplified to a single transformation.
+![Step_8](/images/non_linear_purpose_step_8.png)
+#### That is the reason we need non-linearities.
+#### Without them, stacking layers, one after the other is meaningless, and without stacking layers,we will have no depth.
+#### What's more, with no depth, each and every problem will equal the simple linear example we did earlier, and many practitioners would tell you it was borderline machine learning.
+![Step_8](/images/non_linear_purpose_step_10.png)
+#### With this we can conclude  `TO HAVE DEEEP NETS AND FIND COMPLEX RELASHANSHIPS THROUGH ORBITARY FUNCTIONS, WE NEED NON_LINEARITIES`
 
-What we get is a combined matrix.
-
-w*
-
-with dimensions eight by four.
-
-Well then,
-
-our deep neck can be simplified
-
-into a linear model, which looks this way.
-
-y equals x times w*.
-
-Knowing that,
-
-we realize the hidden layer is completely
-
-useless in this case.
-
-We can just train this simple linear model
-
-and we would get the same result.
-
-In mathematics, this seems like an obvious fact,
-
-but in machine learning,
-
-it is not so clear from the beginning.
-
-The two consecutive linear transformations are equivalent
-
-to a single one.
-
-Even if we add 100 layers
-
-the problem would be simplified to a single transformation.
-
-That is the reason we need non-linearities.
-
-Without them, stacking layers,
-
-one after the other is meaningless,
-
-and without stacking layers,
-
-we will have no depth.
-
-What's more,
-
-with no depth, each and every problem will equal the simple
-
-linear example we did earlier, and many practitioners
-
-would tell you it was borderline machine learning.
-
-All right,
 
 
 
