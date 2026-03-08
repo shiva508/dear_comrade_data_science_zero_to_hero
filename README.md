@@ -142,6 +142,73 @@
 #### So no matter what happens before, the final output of the algorithm is a probability distribution.
 
 
+### Back Propagation
+![back_propagation_step_0](/images/back_propagation_step_0.png)
+#### that the training process consists of updating parameters through the gradient descent for optimizing the objective function.
+![back_propagation_step_1](/images/back_propagation_step_1.png)
+#### In supervised learning, the process of optimization consisted of minimizing the loss.
+#### Our updates were directly related to the partial derivatives of the loss and indirectly related to the errors, or deltas as we called them.
+#### The deltas were the differences between the targets and the outputs.
+#### deltas for the hidden layers are trickier to define, still, they have a similar meaning.
+#### The procedure for calculating them is called backpropagation of errors.
+#### Having these deltas allows us to vary parameters using the familiar update rule.
+![back_propagation_step_2](/images/back_propagation_step_2.png)
+### Forward Propagation
+#### Forward propagation is the process of pushing inputs through the net.
+#### At the end of each epoch, the obtained outputs are compared to the targets to form the errors.
+![back_propagation_step_3](/images/back_propagation_step_3.png)
+#### Then we backpropagate through partial derivatives and change each parameter so errors at the next epoch are minimized.
+![back_propagation_step_4](/images/back_propagation_step_4.png)
+#### For the minimal example, the backpropagation consisted of a single step aligning the weights given the errors we obtained. 
+#### Here's where it gets a little tricky.
+#### When we have a deep net, we must update all the weights related to the input layer and the hidden layers.
+![back_propagation_step_5](/images/back_propagation_step_5.png)
+#### For example, in this famous picture, we have 270 weights, and yes, this means we had to manually draw all 270 arrows
+#### you see here.
+![back_propagation_step_6](/images/back_propagation_step_6.png)
+#### So, updating all 270 weights is a big deal. But wait, we also introduced activation functions.
+#### This means we have to update the weights accordingly considering the used non-linearities and their derivatives.
+#### Finally, to update the weights we must compare the outputs to the targets.
+#### This is done for each layer but we have no targets for the hidden units.
+#### We don't know the errors, so how do we update the weights? That's what backpropagation is all about.
+#### We must derive the appropriate updates as if we had targets.
+![back_propagation_step_7](/images/back_propagation_step_7.png)
+#### Now, the way academics solve this issue is through errors.
+#### The main point is that we can trace the contribution of each unit, hidden or not, to the error of the output.
+![back_propagation_step_8](/images/back_propagation_step_8.png)
+
+### Backpropagation Picture
+#### Let's look at the schematic illustration of backpropagation shown here.
+#### Our net is quite simple.
+#### It has a single hidden layer. Each note is labeled, so we have inputs x1 and x2.
+#### Hidden layer units, output layer units, y1 and y2.
+#### And finally, the targets t1 and t2.
+![back_propagation_step_9](/images/back_propagation_step_9.png)
+#### The weights are W11, W12, W13, W21, W22, and W23, for the first part of the net.
+#### For the second part, we name them U11, U12, U21, U22, U31, and U32.
+#### So we can differentiate between the two types of weights.
+#### We know the error associated with y1 and y2,as it depends on known targets.
+#### So, let's call the two errors, e1 and e2.
+#### Based on them, we can adjust the weights labeled with U. Each U contributes to a single error.
+![back_propagation_step_10](/images/back_propagation_step_10.png)
+#### For example, u11 contributes to e1. Then, we find it's derivative and update the coefficient.
+#### Nothing new here. Now, let's examine w11.
+#### w11 helped us predict h1, but then, we needed h1 to calculate y1 and y2. Thus, it played a role in determining both errors, e1 and e2.
+![back_propagation_step_11](/images/back_propagation_step_11.png) 
+#### So, while u11 contributes to a single error, w11 contributes to both errors.
+#### Therefore, its adjustment rule must be different. The solution to this problem is to take the errors, and backpropagate them through the net, using the weights.
+#### Knowing the U weights,we can measure the contribution of each hidden unit to the respective errors.
+#### Then, once we found out the contribution of each hidden unit to the respective errors, we can update the W weights.
+#### So essentially, through backpropagation, the algorithm identifies which weights lead to which errors.
+#### Then, it adjusts the weights that have a bigger contribution to the errors by more than the weights, with a smaller contribution.
+![back_propagation_step_12](/images/back_propagation_step_12.png) 
+#### A big problem arises when we might also consider the activation functions.
+#### They introduce additional complexity to this process.
+#### Linear contributions are easy, but non-linear ones are tougher.
+![back_propagation_step_13](/images/back_propagation_step_13.png) 
+#### Imagine backpropagating in our introductory net. Once you understand it, it seems very simple.
+#### While pictorially straightforward, mathematically it is rough, to say the least.
+![back_propagation_step_14](/images/back_propagation_step_14.png) 
 
 
 
