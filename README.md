@@ -210,8 +210,42 @@
 #### While pictorially straightforward, mathematically it is rough, to say the least.
 ![back_propagation_step_14](/images/back_propagation_step_14.png) 
 
+### Over fitting
+#### Our training has focused on the particular training set so much, it has missed the point.
+### Under fitting
+#### Model has not captured the under laying logic of the data.
 
-
+### Training
+#### Where training takes place
+### Validation
+#### Help us to prevent over fitting
+#### All the training done on the training set,
+![training_set](/images/training_set.png)
+#### We update weights and bias for training set only
+#### Every once in while we stop training a bit, at this point model is somewhat trained
+![some_what_trained](/images/some_what_trained.png)
+#### Take the model apply it to the validation dataset
+#### This time we will run it without applying weights, only propagate forward not backward. 
+#### We will just calculate lose function, on average it should be equals to training set
+![training_loss_function_validation](/images/training_loss_function_validation.png)
+#### Training and validation data sets are derived from same source
+![training_validation_data_set](/images/training_validation_data_set.png)
+#### We will perform this operation many times
+#### Two loss functions we calculate are referred to training loss, validation loss
+#### Data in the training set trained set using gradient descent
+#### Each subsequent loss less or equal to previous loss
+![training_validation_loss](/images/training_validation_loss.png)
+#### At some point validation loss start increasing, that is red flag
+#### We are overfitting, we are getting better at predicting, but loosing overall logic data
+#### At this point we stop training model
+![over_fitting](/images/training_overfitting.png)
+#### We update weight and bias for training set 
+#### Training set and validation set should not be overlapped 
+#### Data set is separated into three, Training, Validation, Test set
+![training_validation_test](/images/training_validation_test.png)
+#### We need to run the data set it has not seen.
+![training_validation_test_1](/images/training_validation_test_1.png)
+### Test
 
 
 
