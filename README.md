@@ -246,6 +246,49 @@
 #### We need to run the data set it has not seen.
 ![training_validation_test_1](/images/training_validation_test_1.png)
 ### Test
+#### The accuracy we get by forward propagating the test dataset, is the accuracy we expect the model to have if we deploy in the real life. 
+#### 80% training, 10% validation, 10% test ratio
+#### 70% training, 20% validation, 10% test ratio
+#### Training set always greater than other sets
+#### We train the model using training set only
+![training_and_validation_phase](/images/training_and_validation_phase.png)
+#### Every now and then we validate data set by running validation dataset
+![validate_now_and_then](/images/validate_now_and_then.png)
+#### Usually we validate on evry epoch 
+#### We always calculate training_loss , validation_loss
+#### if training_loss and validation_loss goes hand in hand nothing to move along
+#### validation_loss is increasing that means we are overfitting the model.
+#### Test the model with test data set using forward propagation
+#### Accuracy obtained in this step is accuracy of the model.
+### N-Fold cross validation
+#### What if can not split the dataset, if we split dataset model may not be able learn any relationship between data
+![can_not_split](/images/can_not_split.png)
+#### N-Fold cross validation is a strategy which combines training and validation dataset in clever way.
+![n_fold_cross_validation](/images/n_fold_cross_validation.png)
+#### it still requires test dataset.
+![10_fold_cross_validation](/images/10_fold_cross_validation.png)
+#### If we have 11000 records, initially split it to 10000(Training + Validation), 1000 (test)
+#### Split to 10 chunks 9 are training and 1 is validation, this is called 10-fold cross validation.
+#### make it to 10 folds and change the validation chunk on each epoch
+![10_fold_cross_validation_step_1](/images/10_fold_cross_validation_step_1.png)
+![n_fold_pros_cons](/images/n_fold_pros_cons.png)
+### When to stop training model
+#### We train the model until loss function is minimized.
+#### EARLY STOPPING is technique to stop over fitting
+![early_stopping](/images/early_stopping.png)
+#### TRAIN ONLY FOR PRESET NUMBER OF EPOCHE
+![early_stopping_approach_1](/images/early_stopping_approach_1.png)
+#### STOP WHEN LOSS FUNCTION UPDATES BECOMES TOO SMALL
+#### stop when loss function becomes 0.001
+#### The loss function stop changing, making the update rule yield same weights.
+#### We save computing power by using few iterations as possible, we don't iterate uselessly.
+![stop_updating_on_to_small_loss_fn](/images/stop_updating_on_to_small_loss_fn.png)
+### VALIDATION SET strategy
+![validation_set_strategy](/images/validation_set_strategy.png)
+#### Comparison 
+![stop_training_comparision](/images/stop_training_comparision.png)
+
+
 
 
 
