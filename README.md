@@ -288,6 +288,47 @@
 #### Comparison 
 ![stop_training_comparision](/images/stop_training_comparision.png)
 
+### INITIALIZATION
+#### Initialization is process in which we set the initial values of weight
+#### Let us initialize weights and biases in a such way that they are equal to constant.
+![initialization_basic](/images/initialization_basic.png)
+#### The three hidden units are symetrical w.r.t inputs
+![initialization_symetric](images/initialization_symetric.png)
+#### With equal inputs there is nothing to learn 
+![initialization_nothing_to_learn](/images/initialization_nothing_to_learn.png)
+#### Some optimization still take place, still weights remain useless.
+#### Each value has an equal probability of being selected.
+### Problem
+![problem_statement](images/problem_statement.png)
+#### Let's explore the problem. 
+#### Weights are used in linear combinations. Then the linear combinations are activated.
+#### Once more, we will use the sigmoid activator.The sigmoid, as other commonly used non-linearities,is peculiar around its mean and its extremes.
+#### Activation functions take as inputs the linear combination of the units from the previous layer, right? Well, if the weights are too small, this will cause values that fall around this range.
+#### In this range, unfortunately, the sigmoid is almost linear.
+#### If all our inputs are in this range, which will happen if we use small weights, the sigmoid would not apply a non-linearity but a linearity to the linear combination.
+![sigmoid_linear](images/sigmoid_linear.png)
+#### Non-linearities are essential for deep nets.
+#### Conversely, if the values are too large or too small, the sigmoid is almost flat, which causes the output of the sigmoid to be only once or only zeros, respectively.
+### Xavier Initialization
+#### Main Idea: method is not so important, number INPUTS and OUTPUTS are
+![xavier_initialization](images/xavier_initialization.png)
+#### Why inputs and output matters
+#### That's where the activation function is going. So the higher number of outputs the higher need to spread weights.
+#### optimization is done through back propagation. So when we back propagate, we would obviously have the same problem, but in the opposite direction.
+### Learning Rate
+![learning_rate_step_1](images/learning_rate_step_1.png)
+![learning_rate_step_2](images/learning_rate_step_2.png)
+![learning_rate_step_3](images/learning_rate_step_3.png)
+![learning_rate_step_4](images/learning_rate_step_4.png)
+![learning_rate_step_5](images/learning_rate_step_5.png)
+![learning_rate_step_6](images/learning_rate_step_6.png)
+![learning_rate_step_7](images/learning_rate_step_7.png)
+![learning_rate_step_8](images/learning_rate_step_8.png)
+![learning_rate_step_9](images/learning_rate_step_9.png)
+
+
+
+
 
 
 
