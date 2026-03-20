@@ -309,12 +309,26 @@
 ![sigmoid_linear](images/sigmoid_linear.png)
 #### Non-linearities are essential for deep nets.
 #### Conversely, if the values are too large or too small, the sigmoid is almost flat, which causes the output of the sigmoid to be only once or only zeros, respectively.
+
+
 ### Xavier Initialization
 #### Main Idea: method is not so important, number INPUTS and OUTPUTS are
 ![xavier_initialization](images/xavier_initialization.png)
 #### Why inputs and output matters
 #### That's where the activation function is going. So the higher number of outputs the higher need to spread weights.
 #### optimization is done through back propagation. So when we back propagate, we would obviously have the same problem, but in the opposite direction.
+
+### Momentum 
+![momentum_step_1](images/momentum_step_1.png)
+#### How do we add momentum to model
+![momentum_step_2](images/momentum_step_2.png)
+#### The best way to check how past the ball rolls, is to check how fast it rolled a moment ago
+![momentum_step_3](images/momentum_step_3.png)
+![momentum_step_4](images/momentum_step_4.png)
+#### hyperparameter
+![momentum_step_5](images/momentum_step_5.png)
+
+#### 
 ### Learning Rate
 ![learning_rate_step_1](images/learning_rate_step_1.png)
 ![learning_rate_step_2](images/learning_rate_step_2.png)
