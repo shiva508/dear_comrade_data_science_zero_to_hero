@@ -329,7 +329,7 @@
 ![momentum_step_5](images/momentum_step_5.png)
 
 #### 
-### Learning Rate
+### Learning Rate Schedules
 ![learning_rate_step_1](images/learning_rate_step_1.png)
 ![learning_rate_step_2](images/learning_rate_step_2.png)
 ![learning_rate_step_3](images/learning_rate_step_3.png)
@@ -339,6 +339,26 @@
 ![learning_rate_step_7](images/learning_rate_step_7.png)
 ![learning_rate_step_8](images/learning_rate_step_8.png)
 ![learning_rate_step_9](images/learning_rate_step_9.png)
+#### Low learning rate minimize the loss but,it is quite slow.
+![learning_rate_step_10](images/learning_rate_step_10.png)
+#### High learning rate, loss is minimized faster but to a certain extent.
+![learning_rate_step_11](images/learning_rate_step_11.png)
+#### Very learning rate would not minimize loss. it explodes
+![learning_rate_step_12](images/learning_rate_step_12.png)
+#### Learning rate follow schedule would minimum the loss the faster than a low learning and more a high learning rate.
+![learning_rate_step_13](images/learning_rate_step_13.png)
+#### Low learning rate eventually converges good learning rate
+![learning_rate_step_14](images/learning_rate_step_14.png)
+### Adaptive learning rate Schedule
+#### There are two types of adaptive learning rates
+#### AdaGrad, RMSProd
+#### Use AdaGrad, it stands for Adaptive Gradient algorithm
+#### it dynamically varies learning rate at each update and for each weight individually.
+![learning_rate_step_15](images/learning_rate_step_15.png)
+![learning_rate_step_16](images/learning_rate_step_16.png)
+
+
+
 
 
 
