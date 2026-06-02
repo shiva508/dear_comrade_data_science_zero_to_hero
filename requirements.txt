@@ -3,3 +3,5 @@ google-genai
 ipython
 ollama
 openai
+pydantic
+dotenv

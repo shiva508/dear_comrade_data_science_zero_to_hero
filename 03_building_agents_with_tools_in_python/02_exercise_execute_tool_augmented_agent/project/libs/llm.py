@@ -18,16 +18,6 @@ class LLM:
         api_key: Optional[str] = None,
         base_url: Optional[str] = None
     ):
-        """
-        Initialize the agent with its configuration and tools
-
-            Args:
-                role: The agent's role/persona
-                instructions: Basic instructions for the agent
-                model: The LLM model to use
-                temperature: Creativity parameter (0.0 = more 'deterministic')
-                tools: List of tools the agent can use
-        """
         self.model = model
         self.temperature = temperature
         self.client = OpenAI(api_key=api_key,

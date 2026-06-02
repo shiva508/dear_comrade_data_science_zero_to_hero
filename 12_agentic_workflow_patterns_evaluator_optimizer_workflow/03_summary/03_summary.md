@@ -1,2 +1,0 @@
-- **Designing Iterative AI Systems**: You now know how to design a workflow where agents interact in a loop, building on previous outputs.
-- **Crafting Prompts for Feedback and Refinement**: You've learned to instruct an LLM not just to generate content, but also to evaluate content against criteria and to use feedback to improve its next generation. This is a sophisticated prompting skill!
