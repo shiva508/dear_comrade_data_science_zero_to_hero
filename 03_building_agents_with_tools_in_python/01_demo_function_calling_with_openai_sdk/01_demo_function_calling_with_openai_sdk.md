@@ -11,19 +11,20 @@
 ### Begin by setting up the environment and importing necessary libraries. Ensure that the .env file is loaded to access any required environment variables. Add the following to your workspace .env (or config.env) when using the Vocareum-hosted OpenAI endpoint:
 ### OPENAI_API_KEY="voc-key" OPENAI_BASE_URL="https://openai.vocareum.com/v1(opens in a new tab)" TAVILY_API_KEY="tvly-**********"
 ### We recommend storing Vocareum's base URL in OPENAI_BASE_URL and reading it from code (via os.getenv) so the same code works both locally and in the Vocareum workspace without editing endpoints.
+
 ```python
 from typing import Annotated
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 import os
-from lib.messages import UserMessage, SystemMessage
-from lib.tooling import tool
-from lib.llm import LLM
-from lib.parsers import (
-    StrOutputParser,
-    JsonOutputParser, 
-    PydanticOutputParser, 
-    ToolOutputParser,
+from libs.messages import UserMessage, SystemMessage
+from libs.tooling import tool
+from libs.llm import LLM
+from libs.parsers import (
+  StrOutputParser,
+  JsonOutputParser,
+  PydanticOutputParser,
+  ToolOutputParser,
 )
 
 load_dotenv()
